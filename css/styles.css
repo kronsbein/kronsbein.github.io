@@ -10,6 +10,10 @@ a {
     color: #000;
 }
 
+h1,h2 {
+    font-family: "Verdana";
+}
+
 .content {
     position: absolute;
     left: 50%;
@@ -17,3 +21,41 @@ a {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 } 
+
+.content p {
+    padding-top: 10px;
+}
+
+/* 
+Typewriter Animation:
+https://css-tricks.com/snippets/css/typewriter-effect/ 
+*/
+.typewriter h2 {
+    font-family: "Verdana";
+    width: 280px;
+    overflow: hidden;
+    border-right: .15em solid #00e676;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .1em;
+    animation: 
+        typing 2.6s steps(35, end),
+        blink-caret .75s step-end infinite;
+}
+  
+@keyframes typing {
+from { width: 0 }
+to { width: 87% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #00e676; }
+}
+
+@media screen and (max-width: 540px) {
+    .content {
+        width: 90%;
+    }
+}
+
